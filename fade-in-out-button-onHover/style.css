@@ -1,0 +1,46 @@
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: gainsboro;
+  font-family: "Lato", sans-serif;
+  font-size: 100%;
+}
+
+.inner {
+  width: 10rem;
+  height: 10rem;
+  background: white;
+  position: relative;
+  line-height: 1.2rem;
+  cursor: pointer;
+}
+
+.inner:hover .bot-to-top {
+  transform: translate(-50%, 10px);
+  opacity: 0;
+}
+.inner:hover .top-to-bot {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.inner:active {
+  transform: translate(0.5px, 1.5px);
+}
+
+.absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease-in-out 0.25s;
+}
+
+.top-to-bot {
+  opacity: 0;
+  transform: translate(-50%, -25px);
+}
