@@ -1,0 +1,128 @@
+body {
+  background: hsl(0, 0%, 70%);
+  box-sizing: border-box;
+}
+
+#container {
+  /* This will come into play later */
+  perspective: 10px;
+}
+
+#inner {
+  transition: transform 0.5s;
+}
+
+.container {
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 5rem;
+}
+
+.icon-container {
+  width: 15vw;
+  height: 15vw;
+  background: hsl(0, 0%, 95%);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 70%;
+  position: relative;
+}
+
+/* TO-DO ANIMATION */
+
+.tick {
+  /* dash-array: 8 */
+  stroke-dasharray: 8;
+  opacity: 1;
+}
+
+.tick1 {animation: animate-tick1 3s linear infinite;}
+.tick2 {animation: animate-tick2 3s linear infinite;}
+.tick3 {animation: animate-tick3 3s linear infinite;}
+
+@keyframes animate-tick1 {
+  0% {opacity: 1; stroke-dashoffset: 0}
+  25% {opacity: 1; stroke-dashoffset: 8}
+  50% {opacity: 1; stroke-dashoffset: 8}
+  75% {opacity: 1; stroke-dashoffset: 0}
+  100% {opacity: 1; stroke-dashoffset: 0}
+}
+
+@keyframes animate-tick2 {
+  0% {opacity: 1; stroke-dashoffset: 0}
+  25% {opacity: 1; stroke-dashoffset: 8}
+  50% {opacity: 1; stroke-dashoffset: 8}
+  75% {opacity: 1; stroke-dashoffset: 8}
+  100% {opacity: 1; stroke-dashoffset: 0}
+}
+
+@keyframes animate-tick3 {
+  0% {opacity: 1; stroke-dashoffset: 0}
+  25% {opacity: 1; stroke-dashoffset: 8}
+  50% {opacity: 1; stroke-dashoffset: 0}
+  75% {opacity: 1; stroke-dashoffset: 0}
+  100% {opacity: 1; stroke-dashoffset: 0}
+}
+
+/* TO-DO ANIMATION */
+
+
+/* QUOTE SPIN ANIMATION */
+.refresh-arrow {
+  animation: spin-arrow 2s ease infinite;
+  transform-origin: 67% 65%;
+}
+
+.quote-mark {
+  animation: change-color 6s linear infinite;
+}
+
+@keyframes spin-arrow {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+
+/*
+#75BEA3 blue
+#CF5F47 red
+#FCB043 yellow
+*/
+
+@keyframes change-color {
+  0% {fill: #CF5F47}
+    24.9% {fill: #CF5F47}
+    25% {fill: #75BEA3}
+    57.9% {fill: #75BEA3}
+    58% {fill: #FCB043}
+    91.9% {fill: #FCB043}
+    92% {fill: #FCB043}
+    92.1% {fill: #CF5F47}
+  100% {fill: #CF5F47}
+}
+/* QUOTE SPIN ANIMATION */
+.animate-left-reel {
+  animation: spin-left-reel 2s linear infinite;
+  transform-origin: 32% 27%;
+}
+
+.animate-right-reel {
+  animation: spin-right-reel 2s linear infinite;
+  transform-origin: 58% 24.5%;
+}
+
+@keyframes spin-left-reel {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+
+@keyframes spin-right-reel {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}

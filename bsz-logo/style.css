@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+.icon {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  overflow: visible;
+}
+.icon:hover .yellow-moon {
+  animation: moonanimation1 4s linear 0s infinite;
+}
+.icon:hover .blue-moon {
+  animation: moonanimation2 4s linear 0s infinite;
+}
+
+.logo {
+  z-index: 0;
+}
+
+.yellow-moon {
+  position: absolute;
+  top: 0;
+  width: 18%;
+  top: 0%;
+  left: 28%;
+}
+
+.blue-moon {
+  position: absolute;
+  top: 0;
+  width: 15%;
+  top: 30%;
+  right: -3%;
+}
+
+@keyframes moonanimation1 {
+  0% {
+    top: 0%;
+    left: 28%;
+    z-index: 1;
+  }
+  49% {
+    top: 43%;
+    left: 88%;
+    z-index: 1;
+  }
+  50% {
+    top: 43%;
+    left: 88%;
+    z-index: -1;
+  }
+  99% {
+    top: 0%;
+    left: 28%;
+    z-index: -1;
+  }
+  100% {
+    top: 0%;
+    left: 28%;
+    z-index: 1;
+  }
+}
+@keyframes moonanimation2 {
+  0% {
+    top: 30%;
+    right: -3%;
+    z-index: -1;
+  }
+  49% {
+    top: 50%;
+    right: 88%;
+    z-index: -1;
+  }
+  50% {
+    top: 50%;
+    right: 88%;
+    z-index: 1;
+  }
+  99% {
+    top: 30%;
+    right: -3%;
+    z-index: 1;
+  }
+  100% {
+    top: 30%;
+    right: -3%;
+    z-index: -1;
+  }
+}
