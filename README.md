@@ -9,3 +9,6 @@ Code Pen Demo: https://codepen.io/benszucs/pen/PxdWxv
 
 ### BSZ Logo with Orbiting Moons
 Code Pen Demo: https://codepen.io/benszucs/pen/pQQmwW
+
+### BSZ Project Icons
+Code Pen Demo: https://codepen.io/benszucs/pen/OarOJp
